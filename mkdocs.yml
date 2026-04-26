@@ -1,0 +1,14 @@
+site_name: shirowiki
+theme:
+  name: material
+  language: ko
+  palette:
+    - scheme: default
+      primary: black
+      accent: indigo
+nav:
+  - 홈: index.md
+  - Release RPG:
+    - 개요: Release-RPG/index.md
+    - 기획서: Release-RPG/spec.md
+    - 아키텍처: Release-RPG/architecture.md
