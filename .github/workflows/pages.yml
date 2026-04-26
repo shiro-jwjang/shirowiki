@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -11,8 +11,4 @@ jobs:
         with:
           python-version: "3.x"
       - run: pip install mkdocs-material
-      - run: mkdocs build
-      - uses: actions/upload-artifact@v4
-        with:
-          name: site
-          path: site
+      - run: mkdocs gh-deploy --force
